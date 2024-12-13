@@ -1,0 +1,35 @@
+.circleContainer{
+  position: relative;
+}
+.circle {
+    width: 21px;
+    height: 21px;
+    transform: rotate(-90deg); /* چرخش دایره برای شروع از بالا */
+}
+.circleBorder {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 10;
+  stroke-dasharray: 283;  
+  stroke-dashoffset: 283; 
+  animation: drawCircle 10s linear infinite; 
+}
+
+.centerPoint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+@keyframes drawCircle {
+    0% {
+      stroke-dashoffset: 283; /* شروع از بالا */
+    }
+    100% {
+      stroke-dashoffset: 0; /* تکمیل دایره */
+    }
+}
